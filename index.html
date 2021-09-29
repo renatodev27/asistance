@@ -15,8 +15,48 @@
 
     <template id="principal">
         <div class="principal-content">
-            <h1>Principal</h1>
-            <router-link to="/users">To Users</router-link>
+            <div class="app-content">
+                <div :class="(isMenuActive) ? 'sidebar-left-side active' : 'sidebar-left-side'">
+                    <div align="center"> <img src="src/logo_brand.png" width="150"> </div>
+                    <ul class="list-unstyled">
+                        <router-link to="/users" class="text-decoration-none">
+                            <li class="row g-0">
+                                <div class="col-2 text-center">
+                                    <i class="fas fa-clipboard-check"></i>
+                                </div>
+                                <div class="col-9">
+                                    <span class="ms-3">Records</span>
+                                </div>
+                            </li>
+                        </router-link> 
+                        <router-link to="/users" class="text-decoration-none">
+                            <li class="row g-0">
+                                <div class="col-2 text-center">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="col-9">
+                                    <span class="ms-3">Users</span>
+                                </div>
+                            </li>
+                        </router-link> 
+                        <a href="login.html" class="text-decoration-none">
+                            <li class="row g-0">
+                                <div class="col-2 text-center">
+                                    <i class="fas fa-door-open"></i>
+                                </div>
+                                <div class="col-9">
+                                    <span class="ms-3">Exit</span>
+                                </div>
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+                <div :class="(isMenuActive) ? 'content-right-side menu-active' : 'content-right-side'">
+                    <div class="right-side-navbar">
+                        <button class="btn-active-menu" @click="isMenuActive = !isMenuActive"> <i class="fas fa-bars"></i> </button>
+                    </div>
+                </div>
+            </div>
         </div>
     </template>
 
@@ -26,7 +66,7 @@
     
     <script src="js/vue.js"></script>
     <script src="js/vue-router.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/app.js" type="module"></script>
     <script src="js/fontawesome.js"></script>
 </body>
 </html>

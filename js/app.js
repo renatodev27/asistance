@@ -2,7 +2,7 @@ const principal = Vue.component('principal-view', {
     template: '#principal',
     data() {
         return {
-
+            isMenuActive: false,
         }
     }
 })
