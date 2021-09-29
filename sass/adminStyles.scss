@@ -16,9 +16,10 @@ body{
             position: relative;
             transition: all .3s;
             margin-left: 0;
+            //box-shadow: 2px 0 2px 0 #585858;
 
             &.active {
-                margin-left: -300px;
+                margin-left: -302px;
                 transition: all .3s;
             }
 
@@ -26,7 +27,6 @@ body{
                 color: #fff;
                 
                 li {
-                    display: 1subgrid;
                     padding: 10px;
                     
                     &:hover {
@@ -49,20 +49,74 @@ body{
             }
 
             .right-side-navbar {
-                padding: 10px;
                 background-color: #fff;
                 box-shadow: 1px 0px 2px 1px #868686;
 
-                .btn-active-menu {
-                    padding: 5px 10px;
-                    border-radius: 3px;
-                    border: 1px solid #fff;
-                    background-color: rgb(235, 246, 255);
+                .navbar-content {
+                    display: flex;
+                    justify-content: space-between;
+    
+                    .navbar-left {
+                        button {
+                            padding: 16px 22px;
+                            border: 1px solid #fff;
+                            background-color: rgb(255, 255, 255);
 
-                    &:hover {
-                        background-color: #000;
-                        color: #fff;
-                        transition: all .3s;
+                            h6 { font-size: 0.5rem; }
+        
+                            &:hover {
+                                background-color: rgb(56, 55, 77);
+                                border: 1px solid rgb(36, 35, 48);
+                                color: #fff;
+                                border-radius: 0;
+                                transition: all .3s;
+                            }
+                        }
+                    }
+
+                    .navbar-right {
+                        display: flex;
+                        button {
+                            padding: 15px 20px;
+                            background-color: #fa7d35;
+                            border: 1px solid #fa7d35;
+                            border-left: 1.5px solid #fff;
+                            color: #fff;
+                            
+                            h6 { font-size: 0.5rem; }
+
+                            &:hover {
+                                background-color: #ffac7c;
+                                transition: all .3s;
+                            }
+
+                            &.profile-btn {
+                                background-color: #fff;
+                                border: 1px solid #fff;
+                                color: #242424;
+                                display: flex;
+
+                                .profile-img {
+                                    width: 35px;
+                                    height: 35px;
+                                    object-fit: cover;
+                                    object-position: center;
+                                    border-radius: 50%;
+                                    border: 1px inset rgb(240, 240, 240);
+                                    box-shadow: 1px 1px 2px 0 rgb(10, 10, 10);
+                                }
+                                
+                                .profile-text-name {
+                                    margin: 0 8px;
+                                    font-weight: 500;
+                                }
+
+                                &:hover {
+                                    background-color: #fff7f0;
+                                    border: 1px solid #fff6f2;
+                                }
+                            }
+                        }
                     }
                 }
             }

@@ -10,52 +10,103 @@
 </head>
 <body>
     <div id="app">
-        <router-view></router-view>
+        <div class="principal-content">
+            <div class="app-content">
+                <div :class="(sidebarOpen) ? 'sidebar-left-side active' : 'sidebar-left-side'">
+                    <sidebar-view></sidebar-view>
+                </div>
+                <div :class="(sidebarOpen) ? 'content-right-side menu-active' : 'content-right-side'">
+                    <div class="right-side-navbar">
+                        <navbar-view @sendsidebarstatus="recieveSidebarStatus"></navbar-view>
+                    </div>
+                    <div class="right-content">
+                        <router-view></router-view>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <template id="principal">
-        <div class="principal-content">
-            <div class="app-content">
-                <div :class="(isMenuActive) ? 'sidebar-left-side active' : 'sidebar-left-side'">
-                    <div align="center"> <img src="src/logo_brand.png" width="150"> </div>
-                    <ul class="list-unstyled">
-                        <router-link to="/users" class="text-decoration-none">
-                            <li class="row g-0">
-                                <div class="col-2 text-center">
-                                    <i class="fas fa-clipboard-check"></i>
-                                </div>
-                                <div class="col-9">
-                                    <span class="ms-3">Records</span>
-                                </div>
-                            </li>
-                        </router-link> 
-                        <router-link to="/users" class="text-decoration-none">
-                            <li class="row g-0">
-                                <div class="col-2 text-center">
-                                    <i class="fas fa-users"></i>
-                                </div>
-                                <div class="col-9">
-                                    <span class="ms-3">Users</span>
-                                </div>
-                            </li>
-                        </router-link> 
-                        <a href="login.html" class="text-decoration-none">
-                            <li class="row g-0">
-                                <div class="col-2 text-center">
-                                    <i class="fas fa-door-open"></i>
-                                </div>
-                                <div class="col-9">
-                                    <span class="ms-3">Exit</span>
-                                </div>
-                            </li>
-                        </a>
-                    </ul>
-                </div>
-                <div :class="(isMenuActive) ? 'content-right-side menu-active' : 'content-right-side'">
-                    <div class="right-side-navbar">
-                        <button class="btn-active-menu" @click="isMenuActive = !isMenuActive"> <i class="fas fa-bars"></i> </button>
-                    </div>
-                </div>
+        <h1>Home</h1>
+    </template>
+
+    <template id="sidebar">
+        <div class="sidebar-content">
+            <div align="center"> <img src="src/logo_brand.png" width="150"> </div>
+                <ul class="list-unstyled">
+                    <router-link to="/home" class="text-decoration-none">
+                        <li class="row g-0">
+                            <div class="col-2 text-center">
+                                <i class="fas fa-clipboard-check"></i>
+                            </div>
+                            <div class="col-9">
+                                <span class="ms-3">Dashboard</span>
+                            </div>
+                        </li>
+                    </router-link> 
+                    <router-link to="/users" class="text-decoration-none">
+                        <li class="row g-0">
+                            <div class="col-2 text-center">
+                                <i class="fas fa-clipboard-check"></i>
+                            </div>
+                            <div class="col-9">
+                                <span class="ms-3">Records</span>
+                            </div>
+                        </li>
+                    </router-link> 
+                    <router-link to="/users" class="text-decoration-none">
+                        <li class="row g-0">
+                            <div class="col-2 text-center">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="col-9">
+                                <span class="ms-3">Users</span>
+                            </div>
+                        </li>
+                    </router-link> 
+                    <a href="login.html" class="text-decoration-none">
+                        <li class="row g-0">
+                            <div class="col-2 text-center">
+                                <i class="fas fa-door-open"></i>
+                            </div>
+                            <div class="col-9">
+                                <span class="ms-3">Exit</span>
+                            </div>
+                        </li>
+                    </a>
+                </ul>
+        </div>
+    </template>
+
+    <template id="navbar">
+        <div class="navbar-content">
+            <div class="navbar-left">
+                <button class="btn-active-menu" @click="showHideSidebarMenu"> 
+                    <i class="fas fa-bars"></i>
+                    <h6 class="mb-0">MENU</h6>
+                </button>
+            </div>
+            <div class="navbar-right">
+                <button class="right-icons">
+                    <i class="fas fa-bell"></i>
+                    <h6 class="mb-0">NOTIFIY</h6>
+                </button>
+                <button class="right-icons">
+                    <i class="fas fa-comment"></i>
+                    <h6 class="mb-0">CHAT</h6>
+                </button>
+                <button class="right-icons">
+                    <i class="fas fa-cog"></i>
+                    <h6 class="mb-0">SETTINGS</h6>
+                </button>
+                <button class="profile-btn">
+                    <span class="profile-text-name">
+                        <div>RENATO RAMOS PARETTO</div>
+                        <h6 class="mb-0" align="right">Programmer</h6>
+                    </span>
+                    <img src="src/users/user_m4.jpg" class="profile-img">
+                </button>
             </div>
         </div>
     </template>

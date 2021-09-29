@@ -1,10 +1,27 @@
-const principal = Vue.component('principal-view', {
+const home = Vue.component('home-view', {
     template: '#principal',
     data() {
-        return {
-            isMenuActive: false,
+        return { }
+    }
+})
+
+const navbar = Vue.component('navbar-view', {
+    template: '#navbar',
+    data() {
+        return{ 
+            sidebarStatus: false
+        }
+    },
+    methods: {
+        showHideSidebarMenu() {
+            (this.sidebarStatus) ? this.sidebarStatus = false : this.sidebarStatus = true;
+            this.$emit('sendsidebarstatus', this.sidebarStatus);
         }
     }
+})
+
+const sidebar = Vue.component('sidebar-view', {
+    template: '#sidebar',
 })
 
 const users = Vue.component('users-view', {
@@ -17,7 +34,7 @@ const users = Vue.component('users-view', {
 })
 
 const routes = [
-    { path: '/', component: principal},
+    { path: '/home', component: home },
     { path: '/users', component: users},
 ]
 
@@ -28,5 +45,13 @@ const router = new VueRouter({
 const app = new Vue({
     router,
     el: '#app',
-    data: {}
+    data: {
+        sidebarOpen: false
+    },
+    methods: {
+        recieveSidebarStatus(status) {
+            console.log(status);
+            this.sidebarOpen = status;
+        }
+    }
 });

@@ -16,14 +16,13 @@ body .app-content .sidebar-left-side {
   margin-left: 0;
 }
 body .app-content .sidebar-left-side.active {
-  margin-left: -300px;
+  margin-left: -302px;
   transition: all 0.3s;
 }
 body .app-content .sidebar-left-side a {
   color: #fff;
 }
 body .app-content .sidebar-left-side a li {
-  display: 1subgrid;
   padding: 10px;
 }
 body .app-content .sidebar-left-side a li:hover {
@@ -41,20 +40,67 @@ body .app-content .content-right-side.menu-active {
   transition: all 0.3s;
 }
 body .app-content .content-right-side .right-side-navbar {
-  padding: 10px;
   background-color: #fff;
   box-shadow: 1px 0px 2px 1px #868686;
 }
-body .app-content .content-right-side .right-side-navbar .btn-active-menu {
-  padding: 5px 10px;
-  border-radius: 3px;
-  border: 1px solid #fff;
-  background-color: #ebf6ff;
+body .app-content .content-right-side .right-side-navbar .navbar-content {
+  display: flex;
+  justify-content: space-between;
 }
-body .app-content .content-right-side .right-side-navbar .btn-active-menu:hover {
-  background-color: #000;
+body .app-content .content-right-side .right-side-navbar .navbar-content .navbar-left button {
+  padding: 16px 22px;
+  border: 1px solid #fff;
+  background-color: white;
+}
+body .app-content .content-right-side .right-side-navbar .navbar-content .navbar-left button h6 {
+  font-size: 0.5rem;
+}
+body .app-content .content-right-side .right-side-navbar .navbar-content .navbar-left button:hover {
+  background-color: #38374d;
+  border: 1px solid #242330;
   color: #fff;
+  border-radius: 0;
   transition: all 0.3s;
+}
+body .app-content .content-right-side .right-side-navbar .navbar-content .navbar-right {
+  display: flex;
+}
+body .app-content .content-right-side .right-side-navbar .navbar-content .navbar-right button {
+  padding: 15px 20px;
+  background-color: #fa7d35;
+  border: 1px solid #fa7d35;
+  border-left: 1.5px solid #fff;
+  color: #fff;
+}
+body .app-content .content-right-side .right-side-navbar .navbar-content .navbar-right button h6 {
+  font-size: 0.5rem;
+}
+body .app-content .content-right-side .right-side-navbar .navbar-content .navbar-right button:hover {
+  background-color: #ffac7c;
+  transition: all 0.3s;
+}
+body .app-content .content-right-side .right-side-navbar .navbar-content .navbar-right button.profile-btn {
+  background-color: #fff;
+  border: 1px solid #fff;
+  color: #242424;
+  display: flex;
+}
+body .app-content .content-right-side .right-side-navbar .navbar-content .navbar-right button.profile-btn .profile-img {
+  width: 35px;
+  height: 35px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  border: 1px inset #f0f0f0;
+  box-shadow: 1px 1px 2px 0 #0a0a0a;
+}
+body .app-content .content-right-side .right-side-navbar .navbar-content .navbar-right button.profile-btn .profile-text-name {
+  margin: 0 8px;
+  font-weight: 500;
+}
+body .app-content .content-right-side .right-side-navbar .navbar-content .navbar-right button.profile-btn:hover {
+  background-color: #fff7f0;
+  border: 1px solid #fff6f2;
 }
 
 /*# sourceMappingURL=adminstyles.css.map */
