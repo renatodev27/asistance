@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASYST - Login</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/loginStyles.css">
+</head>
+<body>
+    <div class="login-content container-fluid">
+        <div class="row">
+            <div class="col-xs-1 col-sm-3 col-md-4"></div>
+            <div class="col-xs-10 col-sm-6 col-md-4">
+                <div class="login-card">
+                    <div align="center"><img src="src/logo_brand.png"></div>
+                    <form class="form-content mt-3">
+                        <div class="mb-3">
+                            <input type="text" id="username" placeholder="admin" class="input-form">
+                            <i class="fas fa-user input-user-icon"></i>
+                        </div>
+                        <div class="mb-3">
+                            <input type="password" id="password" placeholder="12345" class="input-form">
+                            <i class="fas fa-key input-user-icon"></i>
+                        </div>
+                        <div class="mb-3 pt-3" align="center">
+                            <button type="submit" onclick="login()" class="button-login">INICIAR SESIÓN</button>
+                        </div>
+                    </form>
+                </div>  
+            </div>
+            <div class="col-xs-1 col-sm-3 col-md-4"></div>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/fontawesome.js"></script>
+
+    <script>
+
+        function login() {
+            let username = document.getElementById('username').value;
+            let password = document.getElementById('password').value;
+
+            if (username.toLowerCase() === 'admin' &&  password.toLowerCase() === '12345') window.location.href = 'index.html';
+            else alert('Invalid username or password, please try again');
+
+        }
+    </script>
+</body>
+</html>
