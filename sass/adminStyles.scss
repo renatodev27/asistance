@@ -19,7 +19,7 @@ body{
             //box-shadow: 2px 0 2px 0 #585858;
 
             &.active {
-                margin-left: -302px;
+                margin-left: -300px;
                 transition: all .3s;
             }
 
@@ -58,7 +58,7 @@ body{
     
                     .navbar-left {
                         button {
-                            padding: 16px 22px;
+                            padding: 15px 20px;
                             border: 1px solid #fff;
                             background-color: rgb(255, 255, 255);
 
@@ -97,8 +97,8 @@ body{
                                 display: flex;
 
                                 .profile-img {
-                                    width: 35px;
-                                    height: 35px;
+                                    width: 34px;
+                                    height: 34px;
                                     object-fit: cover;
                                     object-position: center;
                                     border-radius: 50%;

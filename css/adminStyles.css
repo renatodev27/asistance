@@ -16,7 +16,7 @@ body .app-content .sidebar-left-side {
   margin-left: 0;
 }
 body .app-content .sidebar-left-side.active {
-  margin-left: -302px;
+  margin-left: -300px;
   transition: all 0.3s;
 }
 body .app-content .sidebar-left-side a {
@@ -48,7 +48,7 @@ body .app-content .content-right-side .right-side-navbar .navbar-content {
   justify-content: space-between;
 }
 body .app-content .content-right-side .right-side-navbar .navbar-content .navbar-left button {
-  padding: 16px 22px;
+  padding: 15px 20px;
   border: 1px solid #fff;
   background-color: white;
 }
@@ -86,8 +86,8 @@ body .app-content .content-right-side .right-side-navbar .navbar-content .navbar
   display: flex;
 }
 body .app-content .content-right-side .right-side-navbar .navbar-content .navbar-right button.profile-btn .profile-img {
-  width: 35px;
-  height: 35px;
+  width: 34px;
+  height: 34px;
   object-fit: cover;
   object-position: center;
   border-radius: 50%;

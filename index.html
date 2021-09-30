@@ -27,10 +27,6 @@
         </div>
     </div>
 
-    <template id="principal">
-        <h1>Home</h1>
-    </template>
-
     <template id="sidebar">
         <div class="sidebar-content">
             <div align="center"> <img src="src/logo_brand.png" width="150"> </div>
@@ -45,7 +41,7 @@
                             </div>
                         </li>
                     </router-link> 
-                    <router-link to="/users" class="text-decoration-none">
+                    <router-link to="/records" class="text-decoration-none">
                         <li class="row g-0">
                             <div class="col-2 text-center">
                                 <i class="fas fa-clipboard-check"></i>
@@ -78,7 +74,6 @@
                 </ul>
         </div>
     </template>
-
     <template id="navbar">
         <div class="navbar-content">
             <div class="navbar-left">
@@ -88,29 +83,68 @@
                 </button>
             </div>
             <div class="navbar-right">
-                <button class="right-icons">
-                    <i class="fas fa-bell"></i>
-                    <h6 class="mb-0">NOTIFIY</h6>
-                </button>
-                <button class="right-icons">
-                    <i class="fas fa-comment"></i>
-                    <h6 class="mb-0">CHAT</h6>
-                </button>
-                <button class="right-icons">
-                    <i class="fas fa-cog"></i>
-                    <h6 class="mb-0">SETTINGS</h6>
-                </button>
-                <button class="profile-btn">
-                    <span class="profile-text-name">
-                        <div>RENATO RAMOS PARETTO</div>
-                        <h6 class="mb-0" align="right">Programmer</h6>
-                    </span>
-                    <img src="src/users/user_m4.jpg" class="profile-img">
-                </button>
+                <router-link to="/notifications">
+                    <button class="right-icons">
+                        <i class="fas fa-bell"></i>
+                        <h6 class="mb-0">NOTIFIY</h6>
+                    </button>
+                </router-link>
+                <router-link to="/chat">
+                    <button class="right-icons">
+                        <i class="fas fa-comment"></i>
+                        <h6 class="mb-0">CHAT</h6>
+                    </button>
+                </router-link>
+                <router-link to="/settings" class="text-decoration-none">
+                    <button class="right-icons">
+                        <i class="fas fa-cog"></i>
+                        <h6 class="mb-0">SETTINGS</h6>
+                    </button>
+                </router-link>
+                <router-link to="/profile" class="text-decoration-none">
+                    <button class="profile-btn">
+                        <span class="profile-text-name">
+                            <div>RENATO RAMOS PARETTO</div>
+                            <h6 class="mb-0" align="right">Programmer</h6>
+                        </span>
+                        <img src="src/users/user_m4.jpg" class="profile-img">
+                    </button>
+                </router-link>
             </div>
         </div>
     </template>
 
+    <!-- PRINCIPAL TEMPLATE -->
+    <template id="principal">
+        <h1>Home</h1>
+    </template>
+
+    <!-- NOTIFIES TEMPLATE -->
+    <template id="notifies">
+        <h1>Notifications</h1>
+    </template>
+
+    <!-- CHAT TEMPLATE -->
+    <template id="chat">
+        <h1>Chat</h1>
+    </template>
+
+    <!-- SETTINGS TEMPLATE -->
+    <template id="settings">
+        <h1>Settings</h1>
+    </template>
+
+    <!-- PROFILE TEMPLATE -->
+    <template id="profile">
+        <h1>Profile</h1>
+    </template>
+
+    <!-- RECORDS TEMPLATE -->
+    <template id="records">
+        <h1>Records</h1>
+    </template>
+
+    <!-- USERS USERS -->
     <template id="users">
         <h1>Users</h1>
     </template>
